@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>HTML5 Flexible Template</title>
+    <title>Time of Day</title>
     <meta name="robots" content="noindex,nofollow" />
     <style>
 		* {padding:0; margin:0;}
@@ -56,7 +56,7 @@
 </head>
 <body>
 	<header>
-		<h1 class="masthead">HTML5 Flexible Template</h1>
+		<h1 class="masthead">Time of Day</h1>
 		<nav>
 			<ul>
 				<li><a href="#">Link 1</a></li>
@@ -69,13 +69,13 @@
 		</nav>
 	</header>
     <main>
-	 <header><h3>Add main (related) contents here.</h3></header>
-	 <div id="mydiv">Greeting goes here </div> 
+	 <header><h3>An IT 121 assingnment by Prashant Maharjan</h3></header>
+	 <div id="mydiv">Greeting goes here</div>
 	 <p>This HTML5 Flexible template could be a good starting point for some of your projects.  The template file starts by setting a background color on the HTML element, and setting max-width on the body, which is styled like a wrapper.  The BODY element is also set to a percentage width so it leaves a bit of HTML color until it shrinks in size toward the mobile view.</p>
 	 <p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 	 <p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
 	 <p>The FOOTER includes a clear:both to keep everything above it!</p>
-	  <img id="mypic" src="http://dummyimage.com/300x400" alt="Picture of Me!" class="flexible" />
+	  <img src="" alt="time of day week" id="mypic" class="flexible" />
      </main>
     <footer>
       <small>&copy; 2013, All Rights Reserved ~
@@ -86,58 +86,38 @@
 	<!-- END Footer -->
 	<script>
 
-		let myDate = new Date () ;
-		let myHour = myDate.getHours () ;
-		let myGreeting = " ";
-		let myColor = " ";
-		let myPic = "images/";
-
-		//TEST ONLY - REMOVE THIS
-
-
-if(myHour >= 5 && myHour <12){
-    myGreeting = "Good Morning?";
-	myColor = "yellow";
-	myPic += "morning.jpg" ;
-
-}else if (myHour >= 12 && myHour <18) {
-
-	myGreeting = "Good Afternoon?";
-	myColor = "orange"; 
-	myPic += "afternoon.jpg";
-
-}
-else if (myHour >=18 && myHour <23) {
-
-	myGreeting = "Good Evening?";
-	myColor = "red";
-	myPic += "evening.jpg";
-
-}
-else if(myHour >=23 && myHour <5) {
-
-	myGreeting = "Good Night?";
-	myColor = "blue";
-	myPic += "night.jpg";
-}
-
-
-else{
-    alert('NOT morning');
-}
-
-document.getElementById('mydiv').innerHTML = myGreeting;
-document.body.style.backgroundColor = myColor; 
-document.getElementById("mypic").src = myPic;
-
-
+	let myDate = new Date();
+	let myHour = myDate.getHours();
+	let myGreeting="";
+	let myColor="";
+	let myPic="images/";
+		if(myHour >= 5 && myHour<12)
+	{
+		myGreeting = "Morning";
+		myColor="Blue";
+		myPic+="morning.jpg";
+	}
+	else if(myHour >= 12 && myHour< 17) {
+	myGreeting = "Afternoon";
+	myColor="Yellow";
+	myPic+="afternoon.jpg";
+	}
+	else if(myHour >= 17 && myHour< 23) {
+	myGreeting = "evening";
+	myColor="Orange";
+	myPic+="evening.jpg";
+	}
+	else {
+	myGreeting = "night";
+	myColor="Purple";
+	myPic+="night.pic";
+	}
+	document.getElementById('mydiv').innerHTML = myGreeting;
+	document.body.style.backgroundColor=myColor;
+	document.getElementById("mypic").src = myPic;
 
 
 
 	</script>
-
-
-
-
 </body>
 </html>
